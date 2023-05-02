@@ -1,1 +1,11 @@
 @import "../baseInfo";
+.c-header {
+    .navbar {
+        background-color: $red;
+        
+        .navbar-nav .nav-link {
+            color: $white;
+            @include rfs(20px);
+        }
+    }
+}
