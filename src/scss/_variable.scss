@@ -1,9 +1,37 @@
 // variables
 $font_size_base: 16px;
 $black: #000;
-$white: #FFFFFF;
+$white: #ffffff;
+$greyBlue: #556874;
 $dblue: #1d426c;
+$darkblue: #2c3949;
 $red: #a21d22;
-$gray: #566874;
+$gray: #5b6873;
 $whitel: #f2f2f2;
-$lblue: #ced8e2;
+$lightGrey: #efeeee;
+$lblue: #9da4ab;
+$lblue2: #ced8e3;
+$lightBlue: #d0d9e4;
+
+.-bglblue2 {
+    background: $lblue2;
+}
+.-bgWhitel {
+    background: $whitel;
+}
+.-bgRed {
+    background: $red;
+    color: $white;
+}
+.-bgdarkblue {
+    background: $darkblue;
+    color: $white;
+}
+.-bgBlue {
+    background: $dblue;
+    color: $white;
+}
+.-bgGreyBlue {
+    background: $greyBlue;
+    color: $white;
+}
