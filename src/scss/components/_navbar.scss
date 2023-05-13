@@ -28,6 +28,9 @@
         &-brand {
             max-width: 250px;
         }
+        &.-bgBlue {
+            background: $dblue;
+        }
         .navbar-nav {
             gap: 50px;
             .nav-link {
@@ -104,6 +107,15 @@
         }
     }
     @include media-bp("mdl") {
+        &__pre {
+            .container {
+                gap: unset;
+                justify-content: space-between;
+            }
+            &Detail {
+                gap: 15px;
+            }
+        }
         .navbar {
             &-toggler {
                 border: none;

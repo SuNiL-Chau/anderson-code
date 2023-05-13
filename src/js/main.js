@@ -23,3 +23,17 @@ tabButtons.forEach((btn) => {
 		}
 	});
 });
+
+let Accbuttons = document.querySelectorAll(".accordion__button");
+let AccCheckboxs = document.querySelectorAll(".accordion__checkbox");
+
+Accbuttons.forEach((btn) => {
+	btn.addEventListener("click", () => {
+		let accContent = btn.nextElementSibling;
+		console.log(accContent.offsetWidth);
+		btn.classList.toggle("show");
+		accContent.style.maxHeight = btn.classList.contains("show")
+			? accContent.offsetWidth + "px"
+			: "0";
+	});
+});
