@@ -171,7 +171,10 @@
 								</p>
 							</div>
 							<div class="testimonialWrapper_controller">
-								<button class="testimonialWrapper_btn">
+								<button
+									class="testimonialWrapper_btn"
+									id="CampusButton-button-pev"
+								>
 									<svg
 										class="testimonialWrapper_btnIcon"
 										xmlns="http://www.w3.org/2000/svg"
@@ -185,7 +188,10 @@
 										/>
 									</svg>
 								</button>
-								<button class="testimonialWrapper_btn">
+								<button
+									class="testimonialWrapper_btn"
+									id="CampusButton-button-next"
+								>
 									<svg
 										class="testimonialWrapper_btnIcon"
 										xmlns="http://www.w3.org/2000/svg"
@@ -202,12 +208,44 @@
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-12 col-12">
-							<div class="campusTestimonial__imgWrapper">
-								<img
-									src="https://anderson.edu/wp-content/uploads/Aerial-Hartung-Helios-HomePageBanner.jpg"
-									alt=""
-									class="campusTestimonial__img"
-								/>
+							<div class="swiper" id="CampusSlider">
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<div
+											class="campusTestimonial__imgWrapper"
+										>
+											<img
+												src="https://anderson.edu/wp-content/uploads/Aerial-Hartung-Helios-HomePageBanner.jpg"
+												alt=""
+												class="campusTestimonial__img"
+											/>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div
+											class="campusTestimonial__imgWrapper"
+										>
+											<img
+												src="https://i0.wp.com/www.andersoncollege.com/wp-content/uploads/2016/04/DSC02419.jpg?fit=3151%2C3151&ssl=1"
+												alt=""
+												class="campusTestimonial__img"
+											/>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div
+											class="campusTestimonial__imgWrapper"
+										>
+											<img
+												src="https://greenvillejournal.com/wp-content/uploads/2020/10/GJ-Anderson-University-provided-edited.jpg"
+												alt=""
+												class="campusTestimonial__img"
+											/>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -627,6 +665,12 @@
 
 		<script>
 			const swiper1 = new Swiper("#googleReview", {
+				direction: "horizontal",
+				loop: true,
+				navigation: {
+					nextEl: "#review-button-next",
+					prevEl: "#review-button-prev",
+				},
 				// Optional parameters
 				slidesPerView: 3,
 				spaceBetween: 30,
@@ -652,12 +696,18 @@
 						spaceBetween: 30,
 					},
 				},
-				direction: "horizontal",
+			});
+			var studentVideo = new Swiper("#CampusSlider", {
+				effect: "fade",
 				loop: true,
-				navigation: {
-					nextEl: "#review-button-next",
-					prevEl: "#review-button-prev",
+				fadeEffect: {
+					crossFade: true,
 				},
+				navigation: {
+					nextEl: "#CampusButton-button-next",
+					prevEl: "#CampusButton-button-prev",
+				},
+				control: studentVideo,
 			});
 			const swiper = new Swiper("#remoteWith", {
 				// Optional parameters

@@ -7,6 +7,10 @@
 		<title>Program Page</title>
 		<!-- <link rel="shortcut icon" href="assets/faivcon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://unpkg.com/"> -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+		/>
 		<link rel="stylesheet" href="./dist/css/bootstrap.css" />
 		<link rel="stylesheet" href="./dist/css/main.css" />
 		<link rel="stylesheet" href="./dist/css/pages/home.css" />
@@ -131,22 +135,65 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-7 col-12">
-							<div class="testimonialWrapper_container">
-								<img
-									src="assets/images/pages/your-program/testimonial.jpg"
-									class="testimonialWrapper_img"
-									alt=""
-								/>
-								<div class="testimonialWrapper_content">
-									<p class="testimonialWrapper_para">
-										Nika was a doctor back home, but she
-										couldn’t practice when she came to
-										Canada. Finding a new career in the
-										medical field was important to her, and
-										she achieved that goal. Watch her
-										journey to become an Intra Oral Dental
-										Assistant graduate.
-									</p>
+							<div class="swiper" id="studentInsight_1">
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<div
+											class="testimonialWrapper_container"
+										>
+											<img
+												src="assets/images/pages/your-program/testimonial.jpg"
+												class="testimonialWrapper_img"
+												alt=""
+											/>
+											<div
+												class="testimonialWrapper_content"
+											>
+												<p
+													class="testimonialWrapper_para"
+												>
+													Nika was a doctor back home,
+													but she couldn’t practice
+													when she came to Canada.
+													Finding a new career in the
+													medical field was important
+													to her, and she achieved
+													that goal. Watch her journey
+													to become an Intra Oral
+													Dental Assistant graduate.
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div
+											class="testimonialWrapper_container"
+										>
+											<img
+												src="assets/images/pages/your-program/program.jpg"
+												class="testimonialWrapper_img"
+												alt=""
+											/>
+											<div
+												class="testimonialWrapper_content"
+											>
+												<p
+													class="testimonialWrapper_para"
+												>
+													Nika was a doctor back home,
+													but she couldn’t practice
+													when she came to Canada.
+													Finding a new career in the
+													medical field was important
+													to her, and she achieved
+													that goal. Watch her journey
+													to become an Intra Oral
+													Dental Assistant graduate.
+												</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -156,19 +203,43 @@
 									<h2 class="section_heading">
 										Student Insights
 									</h2>
-									<p class="section_para">
-										It’s no secret that as the team, we love
-										Anderson College, but what matters most
-										is that the students love it. Here’s a
-										video from someone who began right where
-										you are, these are their insights … for
-										you.
-									</p>
+									<div class="swiper" id="studentInsight_2">
+										<!-- Additional required wrapper -->
+										<div class="swiper-wrapper">
+											<!-- Slides -->
+											<div class="swiper-slide">
+												<p class="section_para">
+													It’s no secret that as the
+													team, we love Anderson
+													College, but what matters
+													most is that the students
+													love it. Here’s a video from
+													someone who began right
+													where you are, these are
+													their insights … for you.
+												</p>
+											</div>
+											<div class="swiper-slide">
+												<p class="section_para">
+													Lorem ipsum dolor sit amet
+													consectetur adipisicing
+													elit. Inventore non
+													dignissimos accusamus minima
+													nostrum dolor magnam
+													quibusdam dicta similique
+													ullam fugiat a facilis vitae
+													excepturi, suscipit
+													explicabo laudantium impedit
+													quo?
+												</p>
+											</div>
+										</div>
+									</div>
 								</div>
 								<div class="testimonialWrapper_controller">
 									<button
 										class="testimonialWrapper_btn"
-										id="remote-button-prev"
+										id="student-button-prev"
 									>
 										<svg
 											class="testimonialWrapper_btnIcon"
@@ -185,7 +256,7 @@
 									</button>
 									<button
 										class="testimonialWrapper_btn"
-										id="remote-button-prev"
+										id="student-button-next"
 									>
 										<svg
 											class="testimonialWrapper_btnIcon"
@@ -209,7 +280,7 @@
 			<section class="section_space -bgRed">
 				<div class="container">
 					<h2 class="section_heading text-center">
-						Student Insights
+						What you will Learn
 					</h2>
 					<div class="willLeran__list">
 						<p class="willLeran__item">
@@ -449,10 +520,42 @@
 				</p>
 			</div>
 		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 		<!-- Bootstrap Bundle js -->
 		<script src="./dist/js/libs/bootstrap.bundle.min.js"></script>
 		<!-- Custom main js -->
 		<script src="../dist/js/main.js"></script>
+		<script>
+			const studentInsight_1 =
+				document.querySelector("#studentInsight_1");
+			const studentInsight_2 =
+				document.querySelector("#studentInsight_2");
+
+			var studentVideo = new Swiper(studentInsight_1, {
+				effect: "fade",
+				loop: true,
+				fadeEffect: {
+					crossFade: true,
+				},
+				navigation: {
+					nextEl: "#student-button-next",
+					prevEl: "#student-button-prev",
+				},
+				control: studentVideo,
+			});
+			var imageSwiper = new Swiper(studentInsight_2, {
+				loop: true,
+				effect: "fade",
+				fadeEffect: {
+					crossFade: true,
+				},
+				navigation: {
+					nextEl: "#student-button-next",
+					prevEl: "#student-button-prev",
+				},
+				control: studentVideo,
+			});
+		</script>
 	</body>
 </html>
